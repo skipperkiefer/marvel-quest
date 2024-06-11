@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Quest Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img id="header-image" src="Marvel-quest/Images/marvelheaderbanner.jpeg" alt="Header Image">
+        <nav>
+            <div class="dropdown">
+                <div class="dropdown-toggle">Menu</div>
+                <ul class="dropdown-menu">
+                    <li onclick="resetGame()">Reset Game</li>
+                    <li onclick="displayCampaignLog()">Game Log</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="victory-points">Victory Points: 0</div>
+    <main>
+        <section id="shield-hq-tasks">
+            <!-- SHIELD HQ Tasks content will be dynamically added here -->
+        </section>
+        <section id="hero-list-section">
+            <h2>Heroes</h2>
+            <ul id="hero-list"></ul>
+        </section>
+        <section id="resource-list-section">
+            <h2>Resources</h2>
+            <ul id="resource-list"></ul>
+        </section>
+        <section id="unlockables-section">
+            <h2>Unlockables</h2>
+            <!-- Unlockables content will be dynamically added here -->
+        </section>
+        <section id="defeated-villains-section">
+            <h2>Defeated Villains</h2>
+            <!-- Defeated Villains content will be dynamically added here -->
+        </section>
+        <section id="log-game-section">
+            <!-- Log Game content will be dynamically added here -->
+        </section>
+        <input type="file" id="file-input" onchange="uploadExcel()" style="display:none;">
+    </main>
+    <footer>
+        <p>© 2024 Marvel Quest Game. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
